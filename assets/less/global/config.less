@@ -1,0 +1,84 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400');
+
+.open(@x){font:@x 'Open Sans', sans-serif;}
+.mont(@x){font:@x 'Montserrat', sans-serif;}
+.museo500(@x){font:@x 'Museo 500', sans-serif;}
+.museo700(@x){font:@x 'Museo 700', sans-serif;}
+
+// diretorios
+@bg:'../images/bg/';
+@misc:'../images/misc/';
+@svg:'../images/svg/';
+.bg(@x,@y){background:url('@{bg}@{x}') @y;}
+.misc(@x,@y){background:url('@{misc}@{x}') @y;}
+.svg(@x,@y){background:url('@{svg}@{x}') @y;}
+
+// colors
+
+@primary: #191919;
+@secundary: #F4D800;
+@tertiary: #ecf1f2;
+@text: #7f7f7f;
+
+// globals
+body {
+	font-family: 'Open Sans', sans-serif;
+
+	.content {
+		overflow: hidden;
+	}
+
+	.title {
+		margin-bottom: 50px;
+		.mont(3.8em);
+		font-weight: 700;
+		color: @primary;
+		text-transform: uppercase;
+	}
+
+	.text {
+		margin-bottom: 25px;
+		font-size: 1em;
+		line-height: 1.6em;
+		color: @text;
+	}
+
+}
+
+// desktop 1024
+@media only screen and (max-width: 1200px) {}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {
+
+	body {
+		
+		.title {
+			font-size: 3em;
+		}
+
+		.text {
+			font-size: .875em;
+		}
+
+	}
+
+}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {
+
+	body {
+		
+		.title {
+			font-size: 8vw;
+		}
+
+		.text {
+			font-size: .875em;
+		}
+
+	}
+
+}

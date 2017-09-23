@@ -1,0 +1,134 @@
+.header {
+	.flex;
+	.flex-align(center);
+	width: 100%;
+  min-height: 100vh;
+  color: #fff; 
+  .bg('low.jpg', 0 0 no-repeat);   
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+
+.heading {
+	display: inline-block;
+
+	&__hello {
+		position: relative;
+		margin-bottom: 10px;	
+		font-size: 2em;
+		font-weight: 300;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 15px;
+			right: 0;
+			width: 80px;
+			border-bottom: 4px solid @secundary;
+		}
+	}
+
+	&__title {
+		.mont(5.1em);
+		line-height: 5vw;
+		font-weight: 700;
+	}
+
+	&__nav {
+		width: 100%;
+		margin-top: 50px;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+
+		.itens {
+			position: relative;	
+			display: block;		
+			padding: 5px 0;
+			font-size: .8em;
+			color: @secundary;
+			text-transform: uppercase;
+			
+			&:before {
+			  content: '';
+			  position: absolute;
+			  bottom: 0;
+			  left: 0;
+			  width: 100%;
+			  border-bottom: 2px solid @secundary;
+			  .origin(right top);
+			  .transform(scale(0, 1));
+			  .cubic(.4s, 1, 0, 0, 1);
+
+			}
+		}
+	}	
+}
+
+// hover 
+@media only screen and (min-width: 1200px) {
+
+	.heading {
+		
+		.itens {
+
+			&:hover {
+				&:before {
+					.origin(left top);
+					.transform(scale(1, 1));			  					
+				}
+			}				
+		}
+	}
+
+}
+
+// desktop 1024
+@media only screen and (max-width: 1200px) {}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {
+
+	.heading {
+		
+		&__title {
+			font-size: 4em;
+		}
+	}
+
+}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {
+
+	.heading {
+
+		&__hello {
+			font-size: 6vw;
+
+			&:after {
+				width: 50px;
+			}
+		}
+		
+		&__title {
+			font-size: 8vw;
+		}
+
+		&__nav {
+
+			li {
+				display: block;				
+			}
+
+			.itens {
+				display: table;
+				padding: 10px 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,315 @@
+//	sobre mim
+.about {
+	position: relative;
+	min-height: 100vh;
+  padding: 50px 0;
+  background-color: @tertiary;  
+
+  .title {
+  	strong {
+  		font-size: 1.65em; 
+  	}
+  }
+
+  &__profile {
+  	position: relative;
+   	width: 350px;
+  	height: 330px;
+  	margin-top: 25px;
+  	overflow: hidden;
+
+  	img {
+  		width: 100%;
+  		height: auto;
+  		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    	filter: grayscale(100%);
+  	}
+
+  	&:before {
+  		content: '';
+  		position: absolute;
+  		top: 0;
+  		right: 0;
+  		z-index: 100;
+  		border-top: 80px solid @tertiary;
+		  border-bottom: 80px solid transparent; 
+		  border-right: 80px solid @secundary; 
+		  border-left: 80px solid transparent;
+  	}
+
+  	&:after {
+  		content: '';
+  		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		z-index: 100;
+  		border-top: 80px solid transparent;
+		  border-bottom: 80px solid @secundary; 
+		  border-right: 80px solid transparent; 
+		  border-left: 80px solid @tertiary;
+  	}
+  }
+}
+
+//	experiência
+.know {
+	min-height: 100vh;
+	padding: 50px 0;
+	.bg('pattern.png', #020204 left bottom no-repeat);  
+	background-size: cover;
+
+	.title {
+		font-size: 7.5em;
+		text-align: center;
+		color: #fff;
+		span {
+			display: inline-block;
+			vertical-align: top;
+			margin: 47px 0 0 25px;
+			font-size: 32px;
+			text-transform: uppercase;
+			text-align: left;
+		}
+	}
+
+	&__info {
+		display: block;
+		margin-bottom: 25px;
+	}
+
+	&__icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 25px;
+		height: 25px;
+		fill: #fff;
+	}
+
+	&__place {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 5px;
+		.mont(1em);
+		font-weight: 700;
+		color: #fff;		
+	}
+
+	&__date {
+		display: block;
+		margin: 10px 0 20px;
+		color: @secundary;
+		font-weight: bold;
+	}
+
+	&__text {
+		font-size: .9em;
+		line-height: 1.5em;
+		color: @text;
+	}
+	
+	&__list {
+		display: inline-block;
+		vertical-align: middle;       
+    margin: 5px;
+    padding: 20px;
+    background-color: @secundary;
+    .mont(1em);
+    color: @primary; 
+	}
+
+	&__link {
+		display: inline-block;
+		margin-top: 20px;
+		font-size: .9em;
+		color: @text;
+	}
+}
+
+// trabalhos
+.works {
+	min-height: 100vh;
+	padding: 50px 0;
+	background-color: @tertiary;
+
+	.col-xs-6, .col-sm-4, .col-md-3 {
+		padding: 0 5px;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	&__list {
+		position: relative;
+		margin-bottom: 5px;
+		opacity: 0;
+		a {
+			display: block;
+			overflow: hidden;
+		}
+	}
+
+
+	&__image {
+		.transition(.3s);
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__caption {
+		position: absolute;
+		top: 18px;
+		right: 5px;
+		width: 180px;
+		padding: 15px;		
+		background-color: @primary;	
+		.transition(.3s);	
+
+		strong {
+			display: block;
+			margin-bottom: 15px;
+			padding-bottom: 5px;	
+			border-bottom: 1px solid @secundary;
+			.mont(1em);
+			font-weight: 700;
+			color: @secundary;
+			text-transform: uppercase;
+		}
+
+		li {
+			display: inline-block;
+			vertical-align: middle;       
+	    margin-top: 5px;
+	    padding: 5px;
+	    background-color: @secundary;
+	    .mont(.7em);
+	    color: @primary; 
+		}
+	}
+
+	
+}
+
+// hover 
+@media only screen and (min-width: 1200px) {
+	
+	//	trabalhos
+	.works {
+
+		&__caption {		
+			opacity: 0;
+			visibility: hidden;			
+			.transform(translate3d(-10%, 0, 0));
+		}
+
+		a:hover {
+			.works__image {
+				.transform(translate3d(-20%, 0, 0));
+			}
+
+			.works__caption {
+				opacity: 1;
+				visibility: visible;
+				.transform(translate3d(0, 0, 0));
+			}
+		}
+	}
+}
+
+// desktop 1024
+@media only screen and (max-width: 1200px) {
+
+	//	trabalhos
+	.works {
+
+		&__caption {
+			top: auto;
+			bottom: 0;
+			padding: 10px;
+			width: ~"calc(100% - 10px)";
+			
+			strong {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border: none;
+				font-size: .9em;
+				text-align: center;
+			}
+			
+			li {
+				display: none;
+			}			
+		}
+
+	}
+}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {
+
+	//	sobre mim
+	.about {
+		
+	  &__profile {
+	  	width: 100%;
+	  	height: auto;	  	
+	  }
+	}
+
+	//	experiência
+	.know {
+		
+		&__list {
+			padding: 10px;
+		}
+	}
+
+}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {
+
+	//	sobre mim
+	.about {
+
+		.title {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		
+	  &__profile {
+	  	display: none;  	
+	  }
+	}
+
+	//	experiência
+	.know {
+		
+		.title {
+			font-size: 15vw;
+			span {				
+				margin: 14px 0 0 10px;
+				font-size: 4.5vw;				
+			}
+		}
+
+		&__list {
+			padding: 5px;
+			font-size: .875em;
+		}
+	}
+
+	// trabalhos
+	.works {
+		&__caption {
+			
+			strong {
+				font-size: .75em;
+			}
+			
+		}
+	}
+
+}
