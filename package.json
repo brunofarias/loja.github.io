@@ -1,7 +1,7 @@
 {
-  "name": "caju-bootstrap",
+  "name": "brunofrias",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pacote 2018",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "*",
@@ -13,22 +13,20 @@
     "gulp-svgmin": "*",
     "gulp-svgstore": "*",
     "gulp-uglify": "*",
-    "path": "*"
+    "path": "*",
+    "gulp-clean": "*",
+    "gulp-connect": "*",
+    "gulp-file-include": "*",
+    "quick-local-ip": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/agenciacaju/caju-bootstrap.git"
+    "url": "https://github.com/brunofarias"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/agenciacaju/caju-bootstrap#readme",
-  "devDependencies": {
-    "gulp-clean": "^0.3.2",
-    "gulp-connect": "^5.0.0",
-    "gulp-file-include": "^1.0.0",
-    "quick-local-ip": "^1.0.7"
-  }
+  "homepage": "https://github.com/brunofarias#readme"
 }

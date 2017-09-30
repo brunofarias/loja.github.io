@@ -1,61 +1,55 @@
-.footer {
-	.flex;
-	.flex-align(center);
-	.flex-justify(center);
-	width: 100%;
-  min-height: 100vh;
-	background-color: @secundary;
-	color: @primary;		
+footer {
+	position: relative;
+	padding: 30px 0;
+	background-color: #f7ad30;
 
-	.title {
-		text-align: center;
-	}
-}
-
-.foot {		
-	&__caption {
+	.copy {
 		display: block;
-		font-size: 1.2em;
+		font-size: .875em;
+		color: #fff;
 		text-align: center;
 	}
 
-	&__link {
-		display: table;
-		margin: 10px auto;
-		.mont(2em);
-		font-weight: 700;
-		text-align: center;
-		color: @primary;
+	.social {
+		position: absolute;
+		top: 25px;
+		right: 0;
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+			a {
+				color: #fff;
+			}
+		}
 	}
 }
 
-.social {
-	text-align: center;
-
-	&__itens {
-		display: inline-block;
-		vertical-align: middle;
-		margin: 20px 10px;
-	}
-	&__icon {
-		width: 25px;
-		height: 25px;
-		fill: @primary;
-	}
-}
+// hover 
+@media only screen and (min-width: 1200px) {
 	
+}
+
 // desktop 1024
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+
+}
 
 // celular com porcentagem
-@media only screen and (max-width: 992px) {}
+@media only screen and (max-width: 992px) {
+
+}
 
 // celulares tela pequena
 @media only screen and (max-width: 767px) {
 
-	.foot {		
-		&__link {
-			font-size: 7vw;
+	footer {
+		padding: 15px 0;
+		.social {
+			position: relative;
+			top: auto;
+			margin-top: 10px;
+			text-align: center;
 		}
 	}
 
