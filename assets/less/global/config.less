@@ -1,8 +1,8 @@
 // fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Rajdhani:400,600,700');
 
 .open(@x){font:@x 'Open Sans', sans-serif;}
-.mont(@x){font:@x 'Montserrat', sans-serif;}
+.rajd(@x){font:@x 'Rajdhani', sans-serif;}
 
 // diretorios
 @bg:'../images/bg/';
@@ -14,27 +14,17 @@
 
 // colors
 
-@primary: #191919;
+@primary: #FBDC00;
 @secundary: #F4D800;
-@tertiary: #ecf1f2;
 @text: #7f7f7f;
 
 // globals
 body {
+	padding: 0 100px;
+	background-color: #191818;
 	font-family: 'Open Sans', sans-serif;
-
-	.title {
-		font-size: 2.5em;
-		color: #004F6C;
-		font-weight: 300;
-		text-align: center;
-		line-height: 45px;
-
-		&--orange {
-			color: #F7AD30;
-		}
-	}
-
+	font-size: 100%;
+	.boxsizing;
 }
 
 // hover 
@@ -49,18 +39,5 @@ body {
 
 // celular com porcentagem
 @media only screen and (max-width: 992px) {
-
-}
-
-// celulares tela pequena
-@media only screen and (max-width: 767px) {
-
-	body {
-
-		.title {
-			font-size: 1.5em;
-			line-height: 35px;			
-		}
-	}
 
 }

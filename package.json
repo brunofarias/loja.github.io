@@ -9,15 +9,10 @@
     "gulp-htmlmin": "*",
     "gulp-less": "*",
     "gulp-minify-css": "*",
-    "gulp-rename": "*",
     "gulp-svgmin": "*",
     "gulp-svgstore": "*",
     "gulp-uglify": "*",
-    "path": "*",
-    "gulp-clean": "*",
-    "gulp-connect": "*",
-    "gulp-file-include": "*",
-    "quick-local-ip": "*"
+    "path": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,5 +23,11 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/brunofarias#readme"
+  "homepage": "https://github.com/brunofarias#readme",
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-file-include": "^1.0.0",
+    "quick-local-ip": "^1.0.7"
+  }
 }

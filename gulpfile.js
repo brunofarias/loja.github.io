@@ -1,14 +1,17 @@
-var gulp      = require('gulp');
-    uglify    = require('gulp-uglify'),
-    less      = require('gulp-less'),
-    concat    = require('gulp-concat'),
-    minifyCSS = require('gulp-minify-css'),
-    svgstore  = require('gulp-svgstore'),
-    svgmin    = require('gulp-svgmin'),
-    myip      = require('quick-local-ip'),
-    connect   = require('gulp-connect'),
-    clean     = require('gulp-clean'),
-    imagemin  = require('gulp-imagemin');
+var gulp        = require('gulp');
+    uglify      = require('gulp-uglify'),
+    less        = require('gulp-less'),
+    concat      = require('gulp-concat'),
+    minifyCSS   = require('gulp-minify-css'),
+    svgstore    = require('gulp-svgstore'),
+    svgmin      = require('gulp-svgmin'),
+    myip        = require('quick-local-ip'),
+    connect     = require('gulp-connect'),
+    clean       = require('gulp-clean'),
+    imagemin    = require('gulp-imagemin'),
+    path        = require('path'),
+    htmlmin     = require('gulp-htmlmin'),
+    fileinclude = require('gulp-file-include');
 
 function swallowError (error) {
     console.log(error.toString());
@@ -59,6 +62,14 @@ gulp.task('images', function() {
 // HTML RELOAD
 gulp.task('htmlreload',function(){
     gulp.src('assets/*.html')
+    .pipe(connect.reload());
+});
+
+// MINIFICAR HTML
+gulp.task('html', function() {
+    return gulp.src('assets/html/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true,minifyJS: true}))
+    .pipe(gulp.dest('assets/html/'))
     .pipe(connect.reload());
 });
 
