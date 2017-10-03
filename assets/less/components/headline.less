@@ -1,0 +1,207 @@
+// destaque
+.headline {	
+	position: relative;
+	margin: 170px 0 120px;
+
+	&__image {
+		position: relative;
+		z-index: 100;
+		overflow: hidden;
+		opacity: 0;
+		.transition(.5s);
+		.transform(translate3d(-10px, 0, 0));
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		&:before {			
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 200;
+			width: 100%;
+			height: 100%;
+			background: #141416;
+		}
+	}
+
+	&__slider {
+		position: absolute;
+		top: 10%;
+		left: 40%;
+		z-index: 200;
+		padding: 50px;
+		opacity: 0;
+		.transition(.5s);
+		.transform(translate3d(-10px, 0, 0));
+
+		&:after {			
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;			
+		}
+
+		&:before {			
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;			
+			.bg('pattern.jpg', left center no-repeat);
+			visibility: hidden;
+			.transition(.5s);
+			.transform(translate3d(0, 0, 0));	
+		}
+	}
+
+	&__heading {
+		.head {
+			margin: 0 50px 25px 0;
+			.rajd(24px);
+			font-weight: 700;
+			color: #191818;
+			line-height: 120%;
+		}
+
+		.text {
+			display: block;
+			font-size: 17px;
+			font-weight: 300;
+			color: #191818;
+			line-height: 25px;
+		}		
+	}		
+
+	&--right {
+		border: 1px solid red;
+
+		.title {
+			margin-bottom: 75px;
+			.rajd(32px);
+			color: #fff;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.headline__heading {
+			position: absolute;
+			top: 25%;
+			left: 0;
+			z-index: 200;
+			padding: 50px;
+			
+			// opacity: 0;
+			// .transition(.5s);
+			// .transform(translate3d(-10px, 0, 0));
+
+			&:after {			
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #fff;			
+			}
+
+
+			&:before {			
+				content: "";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;			
+				.bg('pattern.jpg', left center no-repeat);
+				visibility: hidden;
+				.transition(.5s);
+				.transform(translate3d(0, 0, 0));	
+			}
+		}
+
+		.headline__image {
+			margin-left: 26.5%;
+		}
+	}
+
+	&.show {
+
+		.headline__image {
+			opacity: 1;
+			.delay(.6s);
+			.transform(translate3d(0, 0, 0));	
+			&:before {			
+				-webkit-animation: mask 1.5s;
+				animation: mask 1.5s;
+				-webkit-animation-iteration-count: 1;
+				animation-iteration-count: 1;
+				-webkit-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+			}
+		}
+
+		.headline__slider, &.headline--right .headline__heading  {
+			opacity: 1;
+			.delay(1s);
+			.transform(translate3d(0, 0, 0));	
+
+			&:before {
+				visibility: visible;
+				.delay(1.4s);
+				.transform(translate3d(20px, 20px, 0));	
+			}			
+		}
+			
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+
+	// destaque
+	.headline {	
+
+		&__slider {
+			width: 374px;
+			min-height: 370px;	
+		}		
+
+		&__image {
+			width: 40vw;
+			height: 85vh;
+		}
+
+		&--right {
+			.headline__heading {
+				width: 374px;
+				min-height: 438px;	
+			}
+			.text {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+}
+
+// desktop 1024
+@media only screen and (max-width: 1366px) {
+
+}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {
+
+}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {
+
+}

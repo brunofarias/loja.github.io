@@ -1,12 +1,9 @@
 // cabeçalho
 .header {
-	display: inline-block;
-	width: 100%;
 	margin: 50px 0;
 
 	&__logo {
 		display: inline-block;
-		vertical-align: middle;
 		width: 140px;
 		padding: 8px 0;
 		background-color: #666;
@@ -52,9 +49,8 @@
 		&:after {
 			content: '';
 			position: absolute;
-			top: 0;
-			bottom: 0;
 			right: 0;
+			left: 0;
 			width: 20px;
 			height: 20px;
 			margin: auto;
@@ -62,15 +58,14 @@
 			background-size: 100%;
 			opacity: 0;
 			.transition(.3s);
-			.transform(translate3d(-5px, 0, 0));
+			.transform(translate3d(0, 10px, 0));
 		}
 
 		&:hover {
-			padding-right: 30px;
-
+			color: #fff;
 			&:after {
 				opacity: 1;
-				.transform(translate3d(0, 0, 0));
+				.transform(translate3d(0, -5px, 0));
 			}
 		}
 	}
