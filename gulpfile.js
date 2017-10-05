@@ -81,6 +81,7 @@ var global = [
     'assets/js/plugins/owl.carousel.js',
     'assets/js/plugins/placeholder.js',
     'assets/js/plugins/validate.js',
+    'assets/js/plugins/svg4everybody.js',
     'assets/js/modules/main.js'
 ];
 

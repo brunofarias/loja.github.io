@@ -1,81 +1,7 @@
-// cabeçalho
 .header {
 	margin: 50px 0;
-
-	&__logo {
-		display: inline-block;
-		width: 140px;
-		padding: 8px 0;
-		background-color: #666;
-		font-size: 20px;
-		line-height: 100%;
-		color: #eee;
-		text-align: center;
-	}
-
-	&__side {
-		float: right;
-	}
-
-	&__phone {
-		display: inline-block;
-		vertical-align: middle;
-		padding-left: 30px;
-		margin-right: 30px;
-		.rajd(18px);
-		font-weight: 700;
-		color: #fff;
-
-		&--whats {
-			.svg('whats.svg', left center no-repeat);
-			background-size: 20px;
-			border-right: 1px solid #666;
-			padding-right: 30px;
-		}
-
-		&--call {
-			.svg('call.svg', left center no-repeat);
-			background-size: 20px;
-		}
-	}
-
-	&__share {
-		position: relative;
-		.rajd(18px);
-		font-weight: 700;
-		color: #95989A;
-		.transition(.5s);
-
-		&:after {
-			content: '';
-			position: absolute;
-			right: 0;
-			left: 0;
-			width: 20px;
-			height: 20px;
-			margin: auto;
-			.svg('share.svg', 0 0 no-repeat);
-			background-size: 100%;
-			opacity: 0;
-			.transition(.3s);
-			.transform(translate3d(0, 10px, 0));
-		}
-
-		&:hover {
-			color: #fff;
-			&:after {
-				opacity: 1;
-				.transform(translate3d(0, -5px, 0));
-			}
-		}
-	}
-
-	.btn {
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 30px;
-	}
 }
+
 // hover 
 @media only screen and (min-width: 1200px) {
 	
@@ -93,6 +19,5 @@
 
 // celulares tela pequena
 @media only screen and (max-width: 767px) {
-
-
+	
 }
