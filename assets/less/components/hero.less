@@ -14,29 +14,30 @@
 	}
 
 	&__phone {
-		display: inline-block;
-		vertical-align: middle;
-		padding-left: 30px;
-		margin-right: 30px;
+		display: inline-block;	
+		margin-right: 15px;
+		padding-right: 15px;
 		.rajd(18px);
 		font-weight: 700;
 		color: #fff;
 
 		&--whats {
+			padding-left: 30px;
 			.svg('whats.svg', left center no-repeat);
 			background-size: 20px;
 			border-right: 1px solid #666;
-			padding-right: 30px;
 		}
 
 		&--call {
-			.svg('call.svg', left center no-repeat);
-			background-size: 20px;
+			margin-right: 10px;
+			padding-right: 0;
 		}
+
 	}
 
 	&__share {
 		position: relative;
+
 		.rajd(18px);
 		font-weight: 700;
 		color: #95989A;
@@ -69,25 +70,31 @@
 	.btn {
 		display: inline-block;
 		vertical-align: middle;
-		margin-right: 30px;
+		margin-right: 20px;
 	}
 }
-// hover 
-@media only screen and (min-width: 1200px) {
+
+@media only screen and (min-width: 992px) {
+
+	.hero {
+			
+		.btn {
+			margin-right: 20px;
+		}
+		
+	}
 	
 }
 
-// desktop 1024
-@media only screen and (max-width: 1200px) {
 
-}
+@media only screen and (min-width: 1170px) {
 
-// celular com porcentagem
-@media only screen and (max-width: 992px) {
+	.hero {		
 
-}
-
-// celulares tela pequena
-@media only screen and (max-width: 767px) {
-
+		.btn {
+			margin-right: 30px;
+		}
+		
+	}
+	
 }

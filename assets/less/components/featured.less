@@ -1,12 +1,15 @@
 // destaque
 .featured {	
-	position: relative;
-	margin-bottom: 190px;
+	margin-bottom: 50px;
+
+	.container {
+		position: relative;
+	}
 
 	&__slider {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 45px;
 		z-index: -100;
 
 		.image {		
@@ -70,26 +73,23 @@
 
 	&__heading {	
 		display: table;
-		margin-left: 100px;	
 
 		.inner {
 			display: table-cell;
 			vertical-align: middle;
 		}
 
-		.head {
-			.rajd(60px);
-			font-weight: 700;
+		.head {					
 			color: #fff;
 			letter-spacing: .2px;
 			line-height: 120%;
+			font-family: 'Rajdhani',sans-serif;
+			font-weight: 700;	
 		}
 
 		.caption {
 			position: relative;
-			display: block;
-			margin-right: 60%;
-			font-size: 24px;
+			display: block;					
 			color: #fff;
 
 			&:after {
@@ -109,18 +109,28 @@
 	}	
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 768px) {
 
 	// destaque
 	.featured {			
 
 		&__heading {			
-			width: 420px;
+			width: 350px;
 			height: 70vh;
+
+			.head {				
+				font-size: 50px;										
+			}
+
+			.caption {		
+				margin-right: 40%;			
+				font-size: 24px;				
+			}	
 		}
 
 		&__slider {
-			width: 64vw;		
+			width: 60vw;		
+			
 			.image {
 				height: 70vh;
 			}
@@ -129,15 +139,62 @@
 
 }
 
-// desktop 1024
-@media only screen and (max-width: 1366px) {
+@media only screen and (min-width: 992px) {
+
+	// destaque
+	.featured {	
+		margin-bottom: 190px;		
+
+		&__heading {			
+			width: 350px;
+			height: 70vh;
+
+			.head {
+				font-size: 50px;										
+			}
+
+			.caption {		
+				margin-right: 40%;			
+				font-size: 24px;				
+			}	
+		}
+
+		&__slider {
+			width: 60vw;		
+
+			.image {
+				height: 70vh;
+			}
+		}
+	}
 
 }
 
-// celular com porcentagem
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 1170px) {
+
+	// destaque
+	.featured {			
+
+		&__heading {	
+			width: 420px;		
+			margin-left: 100px;
+
+			.head {
+				font-size: 60px;			
+			}
+
+			.caption {		
+				margin-right: 60%;	
+			}	
+		}
+
+		&__slider {
+			width: 56.8vw;		
+		}
+	}
 
 }
+
 
 // celulares tela pequena
 @media only screen and (max-width: 767px) {
