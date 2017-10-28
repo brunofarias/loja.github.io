@@ -1,6 +1,9 @@
 // destaque
 .headline {	
-	position: relative;
+
+	.inner {
+		position: relative;
+	}	
 
 	.title {
 		margin-top: 120px;
@@ -14,6 +17,8 @@
 	&__image {
 		position: relative;
 		z-index: 100;
+		width: 500px;
+		height: 600px;
 		overflow: hidden;		
 
 		img {
@@ -133,93 +138,6 @@
 			}	
 		}
 	}
-}
-
-@media only screen and (min-width: 768px) {
-
-	// destaque
-	.headline {	
-
-		&__box {
-			width: 374px;
-			min-height: 370px;	
-
-			&--right {
-				top: 10%;
-				right: 15px;
-			}
-
-			&--left {
-				top: 25%;
-				left: 15px;
-			}
-		}		
-
-		&__image {
-			width: 66vw;
-			height: 73vh;
-
-			&--right {
-				margin-left: 31%;
-			}
-		}		
-	}
-}
-
-
-@media only screen and (min-width: 992px) {
-
-	// destaque
-	.headline {	
-
-		&__image {
-			width: 46vw;
-
-			img {
-				width: auto;
-			}
-
-			&--right {
-				margin-left: 41.8%;
-			}
-		}		
-	}
-
-}
-
-@media only screen and (min-width: 1170px) {
-
-	// destaque
-	.headline {	
-
-		&__box {
-
-			&--right {
-				left: 52%;
-				right: auto;
-			}
-
-			&--left {
-				right: 52%;
-				left: auto;
-			}
-			
-		}		
-
-		&__image {
-			width: 38.5vw;
-			height: 76.5vh;
-
-			&--left {
-				margin-left: 16.5%;
-			}
-
-			&--right {
-				margin-left: 38.5%;
-			}
-		}		
-	}
-
 }
 
 // desktop 1024
